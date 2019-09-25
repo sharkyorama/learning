@@ -5,7 +5,7 @@
 
   tasks:
 
-- name: Windows Update
+- name: Update Windows
   win_updates:
     category_name:
     - SecurityUpdates
