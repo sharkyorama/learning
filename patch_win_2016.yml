@@ -13,11 +13,4 @@
     reboot: yes
     reboot_timeout: 420
    
-#
-# -name: Update Windows
-# win_updates:
-# category_name:
-# - SecurityUpdates
-# - CriticalUpdates
-# reboot: yes
-# reboot_timeout: 420
+
