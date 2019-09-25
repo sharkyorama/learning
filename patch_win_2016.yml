@@ -6,7 +6,7 @@
   tasks:
 
 - name: Update Windows
-  win_updates:
+- win_updates:
     category_name:
     - SecurityUpdates
     - CriticalUpdates
