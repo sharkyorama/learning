@@ -1,7 +1,7 @@
 - name: Windows Server Patching
-hosts: win2016
-gather_facts: yes
-connection: winrm
+  hosts: win2016
+  gather_facts: yes
+  connection: winrm
 
 tasks:
 
