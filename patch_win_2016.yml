@@ -3,7 +3,7 @@
   gather_facts: yes
   connection: winrm
 
-tasks:
+  tasks:
 
 - name: Update Windows
   win_updates:
