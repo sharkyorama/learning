@@ -9,8 +9,8 @@
         category_name:
         - SecurityUpdates
         - CriticalUpdates
-   reboot: yes
-   reboot_timeout: 420
+      reboot: yes
+      reboot_timeout: 420
    
 #
 # -name: Update Windows
