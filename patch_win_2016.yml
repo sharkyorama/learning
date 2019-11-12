@@ -1,15 +1,14 @@
- - name: Windows Server Patching
+- name: Windows Server Patching
   hosts: win2016
   gather_facts: yes
   connection: winrm
-
   tasks:
 
- - name: Windows Update
-   win_updates:
-   category_name:
-   - SecurityUpdates
-   - CriticalUpdates
+    - name: Windows Update
+      win_updates:
+        category_name:
+        - SecurityUpdates
+        - CriticalUpdates
    reboot: yes
    reboot_timeout: 420
    
