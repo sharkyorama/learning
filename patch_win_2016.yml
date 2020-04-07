@@ -1,7 +1,7 @@
 ---
 
 - name: Install all security, critical, and rollup updates without a scheduled task
-  hosts: win2016.sharky.local
+  hosts: 192.168.0.44
   connection: winrm
   tasks:
     - name: Update Windows
