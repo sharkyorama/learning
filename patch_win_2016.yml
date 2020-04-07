@@ -1,22 +1,11 @@
 ---
-# Ansible playbook to run Windows Update and restart, if required
-#
-# http://docs.ansible.com/ansible/win_updates_module.html
-# https://docs.ansible.com/ansible/win_reboot_module.html
 
-- name:  Windows Update
-  hosts: all
-  ansible_connection=winrm
-  gather_facts: false
+- name: Install all security, critical, and rollup updates without a scheduled task
+  hosts: 192.168.0.44
   tasks:
-    - name: Running Windows Update
+    - name: Update Windows
       win_updates:
-        category_names: ['SecurityUpdates','CriticalUpdates','UpdateRollups', 'Updates', 'DefinitionUpdates']
-      register: result
-
-    # output results
-    - debug: var=result
-    
-    # reboot only if required
-    - win_reboot:
-      when: result.reboot_required
+      category_names:
+        - SecurityUpdates
+        - CriticalUpdates
+        - UpdateRollups
